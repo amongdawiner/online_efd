@@ -20,39 +20,16 @@ from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle,
 )
 
-VERSION = "0.4.3"
+VERSION = "0.0.1"
 
 # Newest first. Add a new entry for every improvement.
 CHANGELOG = [
-    ("0.4.3", "2026-10-10", [
-        "Composer package renamed to ubitechsolutionsltd/online-efd (the PHP namespace stays OnlineEfd).",
-    ]),
-    ("0.4.2", "2026-10-10", [
-        "Sample data in the README, guide and tests replaced with placeholders (no real TIN, certificate key, registration or contact details).",
-    ]),
-    ("0.4.1", "2026-10-10", [
-        "salesmanager prints the receipt number, verification code and QR on the invoice page, the POS slip and the invoice PDF.",
-    ]),
-    ("0.4.0", "2026-10-10", [
-        "New command efd:retry: re-sends real (non-test) receipts TRA has not accepted, with their original numbers. Schedule it every few minutes.",
-        "salesmanager now issues a receipt automatically when an invoice is paid in full (per-business switch, off by default).",
-    ]),
-    ("0.3.0", "2026-10-10", [
-        "Test receipts: issueTestReceipt() sends a receipt flagged is_test. TRA still receives it and it uses the next counters, but it is kept out of Z-reports and never blocks one.",
-        "EfdException now carries the stored receipt ($e->receipt) so callers can log rejected receipts.",
-        "Integrated into salesmanager: EFD add-on, shared/own details per business, settings page and per-business test area.",
-    ]),
-    ("0.2.1", "2026-10-10", [
-        "Documentation redesigned: salesmanager theme and logo, shorter, step-by-step usage flow with Laravel and PHP samples.",
-    ]),
-    ("0.2.0", "2026-10-10", [
-        "Simplified: removed Livewire, Blade views and Gate-based authorization. The package is UI-free.",
-        "Added Efd::configure(), Efd::status(), Efd::removeCertificate().",
-        "Receipts can be issued from a JSON string or array, with field validation.",
-        "18 tests passing.",
-    ]),
-    ("0.1.0", "2026-10-10", [
-        "Initial package: profiles, registration, token cache, receipts, Z-reports, queue job, events, Artisan command.",
+    ("0.0.1", "2026-10-10", [
+        "First release.",
+        "Per-owner EFD profiles with encrypted certificate and TRA credentials; registration, token caching, receipts from JSON, Z-reports.",
+        "Test receipts (flagged, kept out of Z-reports), queued posting, ReceiptPosted / ReceiptFailed events.",
+        "Artisan commands efd:z-report and efd:retry.",
+        "Settings API for a host app's own settings page: Efd::configure(), Efd::status(), Efd::removeCertificate().",
     ]),
 ]
 
