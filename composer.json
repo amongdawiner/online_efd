@@ -1,5 +1,5 @@
 {
-    "name": "ubitechsolutionsltd/online-efd",
+    "name": "online-efd/online-efd",
     "description": "Reusable Laravel package for TRA (Tanzania) VFD/EFD integration: per-tenant certificates & credentials, registration, receipts and Z-reports. Plain PHP/JSON API, no UI.",
     "type": "library",
     "license": "proprietary",

@@ -20,10 +20,13 @@ from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle,
 )
 
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 # Newest first. Add a new entry for every improvement.
 CHANGELOG = [
+    ("0.0.2", "2026-10-10", [
+        "composer.json name now matches the Packagist package: online-efd/online-efd.",
+    ]),
     ("0.0.1", "2026-10-10", [
         "First release.",
         "Per-owner EFD profiles with encrypted certificate and TRA credentials; registration, token caching, receipts from JSON, Z-reports.",
@@ -167,7 +170,7 @@ story += [Spacer(1, 78 * mm),
                     ParagraphStyle("D", parent=BODY, fontSize=11, leading=16, textColor=TEXT2)),
           Spacer(1, 10 * mm),
           Paragraph(f"Version <b>{VERSION}</b> &nbsp;|&nbsp; Updated <b>{CHANGELOG[0][1]}</b> &nbsp;|&nbsp; "
-                    "Composer: <font face='Courier'>ubitechsolutionsltd/online-efd</font>",
+                    "Composer: <font face='Courier'>online-efd/online-efd</font>",
                     ParagraphStyle("M", parent=BODY, fontSize=9, textColor=SLATE)),
           PageBreak()]
 
@@ -200,7 +203,7 @@ code("""
 ]
 """)
 code("""
-composer require ubitechsolutionsltd/online-efd:@dev
+composer require online-efd/online-efd:@dev
 php artisan migrate        # creates efd_profiles, efd_receipts, efd_z_reports
 """)
 step_heading(2, "Mark the tenant model")

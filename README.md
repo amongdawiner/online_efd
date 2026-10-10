@@ -11,7 +11,7 @@ Requires PHP 8.1+, `ext-openssl`, `ext-simplexml`, Laravel 10–13. Keep `APP_KE
 ## Install
 
 ```bash
-composer require ubitechsolutionsltd/online-efd
+composer require online-efd/online-efd
 ```
 
 Or, while developing locally against a checkout, point Composer at the folder instead:
@@ -20,7 +20,7 @@ Or, while developing locally against a checkout, point Composer at the folder in
 "repositories": [{ "type": "path", "url": "../vfd-master/online_efd", "options": { "symlink": true } }]
 ```
 ```bash
-composer require ubitechsolutionsltd/online-efd:@dev
+composer require online-efd/online-efd:@dev
 php artisan migrate
 ```
 
